@@ -30,91 +30,26 @@
                     <div class="balance-container">
                         <div class="section assets">
                             <h2>💰 Assets (What You Own)</h2>
-                            
                             <div class="category">
                                 <h3>🏦 Bank Accounts</h3>
-                                <div id="bank-items">
-                                    <div class="item">
-                                        <select>
-                                            <option>Chase Bank</option>
-                                            <option>Bank of America</option>
-                                            <option>Wells Fargo</option>
-                                            <option>Citibank</option>
-                                            <option>TD Bank</option>
-                                            <option>Capital One</option>
-                                            <option>US Bank</option>
-                                            <option>PNC Bank</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <input type="text" placeholder="Account Name" value="Checking">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="bank-items"></div>
                                 <button class="btn add-btn" onclick="addBankAccount()">+ Add Bank Account</button>
                             </div>
-                            
                             <div class="category">
                                 <h3>📈 Traditional Investments</h3>
-                                <div id="investment-items">
-                                    <div class="item">
-                                        <input type="text" placeholder="Investment Name" value="401(k)">
-                                        <input type="text" placeholder="Platform/Broker" value="Fidelity">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="investment-items"></div>
                                 <button class="btn add-btn" onclick="addInvestment()">+ Add Investment</button>
                             </div>
-                            
                             <div class="category">
                                 <h3>₿ Popular Cryptocurrencies</h3>
-                                <div id="crypto-items">
-                                    <div class="item">
-                                        <select>
-                                            <option value="bitcoin">Bitcoin (BTC)</option>
-                                            <option value="ethereum">Ethereum (ETH)</option>
-                                            <option value="binancecoin">Binance Coin (BNB)</option>
-                                            <option value="cardano">Cardano (ADA)</option>
-                                            <option value="solana">Solana (SOL)</option>
-                                            <option value="xrp">XRP (XRP)</option>
-                                            <option value="polkadot">Polkadot (DOT)</option>
-                                            <option value="dogecoin">Dogecoin (DOGE)</option>
-                                            <option value="shiba-inu">Shiba Inu (SHIB)</option>
-                                            <option value="avalanche">Avalanche (AVAX)</option>
-                                        </select>
-                                        <input type="number" placeholder="Amount" step="0.00001">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="crypto-items"></div>
                                 <button class="btn add-btn" onclick="addCrypto()">+ Add Popular Crypto</button>
                             </div>
-                            
                             <div class="category">
                                 <h3>🪙 Altcoins & Other Crypto</h3>
-                                <div id="altcoin-items">
-                                    <div class="item">
-                                        <select>
-                                            <option value="chainlink">Chainlink (LINK)</option>
-                                            <option value="uniswap">Uniswap (UNI)</option>
-                                            <option value="litecoin">Litecoin (LTC)</option>
-                                            <option value="polygon">Polygon (MATIC)</option>
-                                            <option value="cosmos">Cosmos (ATOM)</option>
-                                            <option value="algorand">Algorand (ALGO)</option>
-                                            <option value="tezos">Tezos (XTZ)</option>
-                                            <option value="stellar">Stellar (XLM)</option>
-                                            <option value="vechain">VeChain (VET)</option>
-                                            <option value="custom">Custom/Other</option>
-                                        </select>
-                                        <input type="number" placeholder="Amount" step="0.00001">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="altcoin-items"></div>
                                 <button class="btn add-btn" onclick="addAltcoin()">+ Add Altcoin</button>
                             </div>
-                            
                             <div class="total-row">
                                 <span>Total Assets:</span>
                                 <span id="total-assets">$0.00</span>
@@ -123,40 +58,16 @@
                         
                         <div class="section liabilities">
                             <h2>💳 Liabilities (What You Owe)</h2>
-                            
                             <div class="category">
                                 <h3>🏠 Monthly Rent</h3>
-                                <div id="rent-items">
-                                    <div class="item">
-                                        <input type="text" placeholder="Property Name" value="Main Residence">
-                                        <input type="text" placeholder="Landlord/Company">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="rent-items"></div>
                                 <button class="btn add-btn" onclick="addRent()">+ Add Rent</button>
                             </div>
-                            
                             <div class="category">
                                 <h3>💳 Credit Cards & Debt</h3>
-                                <div id="debt-items">
-                                    <div class="item">
-                                        <select>
-                                            <option>Credit Card</option>
-                                            <option>Student Loan</option>
-                                            <option>Personal Loan</option>
-                                            <option>Auto Loan</option>
-                                            <option>Medical Debt</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <input type="text" placeholder="Account Name">
-                                        <input type="number" placeholder="0.00" step="0.01" oninput="calculateTotals()">
-                                        <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                    </div>
-                                </div>
+                                <div id="debt-items"></div>
                                 <button class="btn add-btn" onclick="addDebt()">+ Add Debt</button>
                             </div>
-                            
                             <div class="total-row">
                                 <span>Total Liabilities:</span>
                                 <span id="total-liabilities">$0.00</span>
@@ -169,43 +80,16 @@
                 <div class="tab-content">
                     <div class="section income">
                         <h2>💵 Income Sources</h2>
-                        
                         <div class="category">
                             <h3>💼 Employment Income</h3>
-                            <div id="employment-items">
-                                <div class="item">
-                                    <input type="text" placeholder="Job/Company" value="Primary Job">
-                                    <select>
-                                        <option value="monthly">Monthly</option>
-                                        <option value="weekly">Weekly</option>
-                                        <option value="biweekly">Bi-weekly</option>
-                                        <option value="yearly">Yearly</option>
-                                    </select>
-                                    <input type="number" placeholder="0.00" step="0.01" oninput="calculateIncome()">
-                                    <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                </div>
-                            </div>
+                            <div id="employment-items"></div>
                             <button class="btn add-btn" onclick="addEmployment()">+ Add Job</button>
                         </div>
-                        
                         <div class="category">
                             <h3>💰 Other Income</h3>
-                            <div id="other-income-items">
-                                <div class="item">
-                                    <input type="text" placeholder="Income Source" value="Freelance">
-                                    <select>
-                                        <option value="monthly">Monthly</option>
-                                        <option value="weekly">Weekly</option>
-                                        <option value="yearly">Yearly</option>
-                                        <option value="quarterly">Quarterly</option>
-                                    </select>
-                                    <input type="number" placeholder="0.00" step="0.01" oninput="calculateIncome()">
-                                    <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                </div>
-                            </div>
+                            <div id="other-income-items"></div>
                             <button class="btn add-btn" onclick="addOtherIncome()">+ Add Other Income</button>
                         </div>
-                        
                         <div class="total-row">
                             <span>Total Monthly Income:</span>
                             <span id="total-income">$0.00</span>
@@ -217,84 +101,36 @@
                 <div class="tab-content">
                     <div class="section work">
                         <h2>⏰ Work & Hours Tracker</h2>
-                        
                         <div class="work-stats">
-                            <div class="stat-card">
-                                <h4>Total Hours/Week</h4>
-                                <div class="value" id="total-hours">0</div>
-                            </div>
-                            <div class="stat-card">
-                                <h4>Average Wage</h4>
-                                <div class="value" id="avg-wage">$0.00</div>
-                            </div>
-                            <div class="stat-card">
-                                <h4>Weekly Gross</h4>
-                                <div class="value" id="weekly-gross">$0.00</div>
-                            </div>
-                            <div class="stat-card">
-                                <h4>Avg Tax Rate</h4>
-                                <div class="value" id="tax-rate">0%</div>
-                            </div>
+                            <div class="stat-card"><h4>Total Hours/Week</h4><div class="value" id="total-hours">0</div></div>
+                            <div class="stat-card"><h4>Average Wage</h4><div class="value" id="avg-wage">$0.00</div></div>
+                            <div class="stat-card"><h4>Weekly Gross</h4><div class="value" id="weekly-gross">$0.00</div></div>
+                            <div class="stat-card"><h4>Avg Tax Rate</h4><div class="value" id="tax-rate">0%</div></div>
                         </div>
-                        
                         <div class="category">
                             <h3>💼 Jobs & Working Hours</h3>
-                            <div id="work-items">
-                                <div class="item work-item">
-                                    <input type="text" placeholder="Job Title" value="Main Job">
-                                    <input type="number" placeholder="Hours/Week" step="0.5" class="small-input" oninput="calculateWork()">
-                                    <input type="number" placeholder="$/Hour" step="0.01" class="small-input" oninput="calculateWork()">
-                                    <input type="number" placeholder="Tax %" step="0.1" class="small-input" oninput="calculateWork()">
-                                    <input type="number" placeholder="Net Weekly" step="0.01" class="small-input" readonly>
-                                    <button class="btn remove-btn" onclick="removeItem(this)">×</button>
-                                </div>
-                            </div>
+                            <div id="work-items"></div>
                             <button class="btn add-btn" onclick="addWorkItem()">+ Add Job</button>
                         </div>
-                        
                         <div class="category">
                             <h3>📊 Tax & Earnings Summary</h3>
                             <div class="work-stats">
-                                <div class="stat-card">
-                                    <h4>Weekly Tax</h4>
-                                    <div class="value" id="weekly-tax">$0.00</div>
-                                </div>
-                                <div class="stat-card">
-                                    <h4>Monthly Tax</h4>
-                                    <div class="value" id="monthly-tax">$0.00</div>
-                                </div>
-                                <div class="stat-card">
-                                    <h4>Yearly Tax</h4>
-                                    <div class="value" id="yearly-tax">$0.00</div>
-                                </div>
-                                <div class="stat-card">
-                                    <h4>Weekly Take Home</h4>
-                                    <div class="value" id="take-home">$0.00</div>
-                                </div>
+                                <div class="stat-card"><h4>Weekly Tax</h4><div class="value" id="weekly-tax">$0.00</div></div>
+                                <div class="stat-card"><h4>Monthly Tax</h4><div class="value" id="monthly-tax">$0.00</div></div>
+                                <div class="stat-card"><h4>Yearly Tax</h4><div class="value" id="yearly-tax">$0.00</div></div>
+                                <div class="stat-card"><h4>Weekly Take Home</h4><div class="value" id="take-home">$0.00</div></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="summary-grid">
-            <div class="summary-card">
-                <h3>Total Assets</h3>
-                <div class="amount assets-total" id="summary-assets">$0.00</div>
-            </div>
-            <div class="summary-card">
-                <h3>Total Liabilities</h3>
-                <div class="amount liabilities-total" id="summary-liabilities">$0.00</div>
-            </div>
-            <div class="summary-card">
-                <h3>Net Worth</h3>
-                <div class="amount net-worth-total" id="summary-net-worth">$0.00</div>
-            </div>
-            <div class="summary-card">
-                <h3>Monthly Income</h3>
-                <div class="amount income-total" id="summary-income">$0.00</div>
-            </div>
+            <div class="summary-card"><h3>Total Assets</h3><div class="amount assets-total" id="summary-assets">$0.00</div></div>
+            <div class="summary-card"><h3>Total Liabilities</h3><div class="amount liabilities-total" id="summary-liabilities">$0.00</div></div>
+            <div class="summary-card"><h3>Net Worth</h3><div class="amount net-worth-total" id="summary-net-worth">$0.00</div></div>
+            <div class="summary-card"><h3>Monthly Income</h3><div class="amount income-total" id="summary-income">$0.00</div></div>
         </div>
     </div>
     
